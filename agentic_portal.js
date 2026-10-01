@@ -443,7 +443,16 @@ function getHomepageMarkdown(stats = {}) {
 3. **Bilingual AI Chat & Vision Engine**: Conversational AI in English, Hindi, and Hinglish with real-time web search capabilities and vision media analysis.
 4. **Interactive Support Tickets**: Up to 7 customizable ticket categories, transcript auto-saving, and staff claiming.
 5. **Advanced Moderation & Automod**: Anti-spam, anti-mass mentions, anti-links, phrase filters, auto-timeout, and 8 dedicated private audit log channels.
-6. **Community Utilities**: Interactive reaction polls, level-up reward roles, animated welcome/goodbye canvas cards, and multi-tier giveaways.
+6. **User App & DM Slash Integration**: Run utility, anime, avatar, and minigame commands directly in user DMs without needing a mutual server.
+7. **Dynamic Anime GIF & Social Suite**: 20+ animated social reaction actions powered by live media APIs.
+8. **Interactive Minigames & Utilities**: Real-time multiplayer Tic-Tac-Toe, 21 Blackjack with dealer AI, Rock-Paper-Scissors, and interactive Calculator.
+9. **Community Utilities**: Interactive reaction polls, level-up reward roles, animated welcome/goodbye canvas cards, and multi-tier giveaways.
+
+## Insider Program:
+- **Featured Community**: DARK_BROTHER'S
+- **Description**: 💎 Official Dark Brother's family server community [EN | 02/06] 👑 🖤 stay loyal be respectful towards everyone grow together
+- **Invite**: https://discord.gg/BYGpaPbVS
+- **Status**: Verified Partner Community (Est. Jan 2026)
 
 ## Pricing Tiers (INR):
 - **Free Tier (₹0)**: Standard moderation, AI chat, ticketing panels, 3 free nuke snapshots.
@@ -670,8 +679,38 @@ function getJsonLdStructuredData() {
     });
 }
 
+// ── INSIDER PROGRAM SERVER STATS CACHE ────────────────────────
+let _insiderServerStats = {
+    online: 21,
+    members: 73,
+    lastUpdate: 0
+};
+
+async function updateInsiderStats() {
+    const now = Date.now();
+    if (now - _insiderServerStats.lastUpdate < 3 * 60 * 1000) return _insiderServerStats;
+    try {
+        const res = await fetch('https://discord.com/api/v10/invites/BYGpaPbVS?with_counts=true', {
+            signal: AbortSignal.timeout(3500)
+        });
+        if (res.ok) {
+            const data = await res.json();
+            if (data.approximate_presence_count !== undefined) {
+                _insiderServerStats.online = data.approximate_presence_count;
+            }
+            if (data.approximate_member_count !== undefined) {
+                _insiderServerStats.members = data.approximate_member_count;
+            }
+            _insiderServerStats.lastUpdate = now;
+        }
+    } catch (_) {}
+    return _insiderServerStats;
+}
+updateInsiderStats().catch(() => {});
+
 // ── RICH SSR HOMEPAGE HTML BUILDER ───────────────────────────
 function getSSRHomepageHTML(client) {
+    updateInsiderStats().catch(() => {});
     const { servers: serverCount, users: userCount } = getGuildStats(client);
     const jsonLd = getJsonLdStructuredData();
 
@@ -684,6 +723,8 @@ function getSSRHomepageHTML(client) {
     <meta name="description" content="Fusion Bot is the all-in-one Discord bot featuring Nuke Guard disaster recovery, automated dual cloud backups (Google Drive & Fusion Database), bilingual AI chat & image generation, moderation, and ticketing.">
     <meta name="keywords" content="FusionBot, Discord Bot, Nuke Protection, Server Backups, Discord AI Bot, Discord Moderation, Google Drive Discord Backup">
     <meta name="author" content="${LEGAL_ENTITY}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#5865F2">
     <link rel="canonical" href="${SITE_URL}/">
     
     <!-- Open Graph -->
@@ -782,6 +823,139 @@ function getSSRHomepageHTML(client) {
         .footer-col ul a:hover { color: #fff; }
         .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
 
+        /* Insider Program Section & Discord Invite Card */
+        .insider-section { max-width: 1200px; margin: 0 auto 70px; padding: 0 24px; }
+        .insider-container { display: flex; justify-content: center; align-items: center; margin-top: 32px; }
+        .discord-card {
+            width: 380px;
+            max-width: 100%;
+            background: #1e1f22;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
+            position: relative;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .discord-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(2, 159, 252, 0.4);
+        }
+        .discord-card-link-header {
+            padding: 8px 16px;
+            font-size: 0.84rem;
+            color: #5865f2;
+            background: #111214;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+        .discord-card-link-header a {
+            color: #5865f2;
+            text-decoration: underline;
+        }
+        .discord-card-banner {
+            height: 95px;
+            width: 100%;
+            background: linear-gradient(180deg, #00a8fc 0%, #029ffc 60%, #0077c8 100%);
+            position: relative;
+        }
+        .discord-card-avatar {
+            position: relative;
+            margin-top: -38px;
+            margin-left: 18px;
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            border: 5px solid #1e1f22;
+            background: #000000;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+        .discord-card-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .discord-card-body {
+            padding: 12px 18px 20px 18px;
+        }
+        .discord-card-title {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.2px;
+            margin-bottom: 4px;
+        }
+        .discord-card-counts {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.88rem;
+            color: #949ba4;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        .discord-card-counts .count-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .discord-card-counts .dot-online {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #23a55a;
+        }
+        .discord-card-counts .dot-members {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #80848e;
+        }
+        .discord-card-counts strong {
+            color: #dbdee1;
+            font-weight: 600;
+        }
+        .discord-card-established {
+            font-size: 0.84rem;
+            color: #949ba4;
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+        .discord-card-desc {
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: #dbdee1;
+            margin-bottom: 20px;
+            word-break: break-word;
+        }
+        .discord-card-btn {
+            display: block;
+            width: 100%;
+            background: #248046;
+            color: #ffffff !important;
+            font-weight: 700;
+            font-size: 0.96rem;
+            text-align: center;
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: background 0.15s ease, transform 0.15s ease;
+        }
+        .discord-card-btn:hover {
+            background: #1a6334;
+            transform: translateY(-1px);
+        }
+
         @media (max-width: 768px) {
             h1 { font-size: 2.1rem; }
             .nav-links { display: none; }
@@ -798,6 +972,7 @@ function getSSRHomepageHTML(client) {
                 <span>${BRAND_NAME}</span>
             </a>
             <nav class="nav-links">
+                <a href="#insider-program"><i class="fa-solid fa-gem"></i> Insider Program</a>
                 <a href="/docs"><i class="fa-solid fa-book"></i> Docs</a>
                 <a href="/developers"><i class="fa-solid fa-code"></i> Developers</a>
                 <a href="/premium"><i class="fa-solid fa-crown"></i> Premium</a>
@@ -911,10 +1086,77 @@ function getSSRHomepageHTML(client) {
                     <h3>Per-Server Bot Personalizer</h3>
                     <p>Pro users can customize the bot's identity for their server with custom logo avatars, animated banner GIFs, custom nicknames, and multi-prefix management.</p>
                 </div>
+
+                <!-- User App & DMs -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background:rgba(99,102,241,0.15);color:#6366f1;">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3>User Apps &amp; DM Slash Support</h3>
+                    <p>Install Fusion Bot as a personal User App across Discord. Access utilities, minigames, anime actions, avatar tools, and help menus directly inside private DMs.</p>
+                </div>
+
+                <!-- Anime GIF Engine -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;">
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+                    <h3>Dynamic Anime GIF Engine</h3>
+                    <p>Over 20+ social anime actions including hugs, kisses, slaps, pats, and dances powered by high-speed live media APIs with fresh random GIFs on every command.</p>
+                </div>
+
+                <!-- Interactive Minigames -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background:rgba(34,197,94,0.15);color:#22c55e;">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <h3>Interactive Minigames &amp; Utilities</h3>
+                    <p>Real-time multiplayer Tic-Tac-Toe, 21 Blackjack against dealer AI, Rock-Paper-Scissors, and a full interactive calculator with reliable Discord component collectors.</p>
+                </div>
             </div>
         </section>
 
-        
+        <!-- Insider Program Section -->
+        <section class="insider-section" id="insider-program">
+            <div class="section-header">
+                <div class="badge" style="background:rgba(2,159,252,0.15);border-color:rgba(2,159,252,0.35);color:#38bdf8;">
+                    <i class="fa-solid fa-gem"></i> INSIDER PROGRAM
+                </div>
+                <h2>Featured Insider Communities</h2>
+                <p>Join verified server communities and partner guilds powered by Fusion Bot infrastructure.</p>
+            </div>
+
+            <div class="insider-container">
+                <div class="discord-card">
+                    <div class="discord-card-link-header">
+                        <i class="fa-brands fa-discord"></i> https://discord.gg/BYGpaPbVS
+                    </div>
+                    <div class="discord-card-banner"></div>
+                    <div class="discord-card-avatar">
+                        <img src="https://cdn.discordapp.com/icons/1457383827625476160/daa345e459a98df29d15da38d682b83d.png?size=256" alt="DARK_BROTHER'S Icon" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                    </div>
+                    <div class="discord-card-body">
+                        <div class="discord-card-title">
+                            <span>DARK_BROTHER'S</span>
+                            <svg width="20" height="20" viewBox="0 0 16 16" fill="#ffffff" style="flex-shrink:0;" title="Verified Community">
+                                <path d="M14.92 6.64a2.25 2.25 0 0 0-.82-2 2.25 2.25 0 0 0-2-1.29 2.25 2.25 0 0 0-2-.82 2.25 2.25 0 0 0-2.1 0 2.25 2.25 0 0 0-2 .82 2.25 2.25 0 0 0-2 1.29 2.25 2.25 0 0 0-.82 2 2.25 2.25 0 0 0 0 2.1 2.25 2.25 0 0 0 .82 2 2.25 2.25 0 0 0 2 1.29 2.25 2.25 0 0 0 2 .82 2.25 2.25 0 0 0 2.1 0 2.25 2.25 0 0 0 2-.82 2.25 2.25 0 0 0 2-1.29 2.25 2.25 0 0 0 .82-2 2.25 2.25 0 0 0 0-2.1zm-4.42 4.11H5.5V8.5h5v2.25zm.5-3.25H5V6.75l3-2.5 3 2.5v.75z"/>
+                            </svg>
+                        </div>
+                        <div class="discord-card-counts">
+                            <span class="count-item"><span class="dot-online"></span> <strong>${_insiderServerStats.online || 20}</strong> Online</span>
+                            <span class="count-item"><span class="dot-members"></span> <strong>${_insiderServerStats.members || 73}</strong> Members</span>
+                        </div>
+                        <div class="discord-card-established">Est. Jan 2026</div>
+                        <div class="discord-card-desc">
+                            💎 Official Dark Brother's family server community [EN | 02/06] 👑 🖤 stay loyal be respectful towards everyone grow together
+                        </div>
+                        <a href="https://discord.gg/BYGpaPbVS" target="_blank" rel="noopener noreferrer" class="discord-card-btn">
+                            Join Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Semantic Footer -->
@@ -931,6 +1173,7 @@ function getSSRHomepageHTML(client) {
                     <li><a href="/#features">Nuke Guard &amp; Backups</a></li>
                     <li><a href="/#features">Bilingual AI Engine</a></li>
                     <li><a href="/#features">Support Ticketing</a></li>
+                    <li><a href="/#insider-program">Insider Program</a></li>
                     <li><a href="/premium">Premium Pricing Plans</a></li>
                     <li><a href="/dash/login">Web Dashboard</a></li>
                 </ul>
@@ -981,8 +1224,28 @@ function getAboutHTML() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | ${BRAND_NAME}</title>
     <meta name="description" content="Learn about Fusion Bot, our mission, infrastructure, and leadership. Operated by CHAUDHARY TANMAY.">
+    <meta name="keywords" content="Fusion Bot About Us, CHAUDHARY TANMAY, FusionHub, Discord Bot Mission">
+    <meta name="author" content="${LEGAL_ENTITY}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#5865F2">
     <link rel="canonical" href="${SITE_URL}/about">
     <link rel="icon" type="image/jpeg" href="${LOGO_URL}">
+    <link rel="shortcut icon" href="${LOGO_URL}">
+    <link rel="apple-touch-icon" href="${LOGO_URL}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Us | ${BRAND_NAME}">
+    <meta property="og:description" content="Learn about Fusion Bot, our mission, infrastructure, and leadership.">
+    <meta property="og:url" content="${SITE_URL}/about">
+    <meta property="og:image" content="${BANNER_URL}">
+    <meta property="og:site_name" content="${BRAND_NAME}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | ${BRAND_NAME}">
+    <meta name="twitter:description" content="Learn about Fusion Bot, our mission, infrastructure, and leadership.">
+    <meta name="twitter:image" content="${BANNER_URL}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { background: #0b0e14; color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; padding: 40px 20px; }
@@ -1034,8 +1297,28 @@ function getDevelopersHTML() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Portal &amp; Agent API | ${BRAND_NAME}</title>
     <meta name="description" content="Explore Fusion Bot APIs, OpenAPI 3.1.0 specifications, Model Context Protocol (MCP) integration, and scoped OAuth permissions.">
+    <meta name="keywords" content="Fusion Bot API, Developer Portal, OpenAPI, Discord Bot API, MCP">
+    <meta name="author" content="${LEGAL_ENTITY}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#5865F2">
     <link rel="canonical" href="${SITE_URL}/developers">
     <link rel="icon" type="image/jpeg" href="${LOGO_URL}">
+    <link rel="shortcut icon" href="${LOGO_URL}">
+    <link rel="apple-touch-icon" href="${LOGO_URL}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Developer Portal &amp; Agent API | ${BRAND_NAME}">
+    <meta property="og:description" content="Explore Fusion Bot APIs, OpenAPI 3.1.0 specifications, and Model Context Protocol integration.">
+    <meta property="og:url" content="${SITE_URL}/developers">
+    <meta property="og:image" content="${BANNER_URL}">
+    <meta property="og:site_name" content="${BRAND_NAME}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Developer Portal &amp; Agent API | ${BRAND_NAME}">
+    <meta name="twitter:description" content="Explore Fusion Bot APIs, OpenAPI 3.1.0 specifications, and Model Context Protocol integration.">
+    <meta name="twitter:image" content="${BANNER_URL}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">${jsonLd}</script>
     <style>
@@ -1469,6 +1752,18 @@ ${urls.map(u => `  <url>
             return res.send(getDocsMarkdown());
         }
         res.send(getDevelopersHTML());
+    });
+
+    // 9. Custom Referral / Partner Links (/kaito, /invite/kaito)
+    app.get(['/kaito', '/invite/kaito', '/join/kaito'], (req, res) => {
+        try {
+            const { recordReferralClick } = require('./referral_manager');
+            recordReferralClick('kaito', req);
+        } catch (_) {}
+        res.setHeader('Set-Cookie', 'bot_referral=kaito; Path=/; Max-Age=2592000; SameSite=Lax');
+        const redirectUri = encodeURIComponent(`https://panel.fusionhub.in/dash/callback`);
+        const botInviteUrl = `https://discord.com/api/oauth2/authorize?client_id=1485375910562758967&permissions=8&scope=bot%20applications.commands&response_type=code&redirect_uri=${redirectUri}&state=ref_kaito`;
+        res.redirect(302, botInviteUrl);
     });
 };
 
