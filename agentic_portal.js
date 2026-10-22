@@ -1,3 +1,65 @@
+
+// ── DPDP Act 2023 Cookie Consent Component ──────────────────────
+function getCookieConsentHTML() {
+    return `
+    <div id="fusion-cookie-banner" style="display:none; position:fixed; bottom:20px; left:20px; right:20px; max-width:680px; margin:0 auto; z-index:999999; background:rgba(15,18,28,0.96); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,0.12); border-radius:18px; padding:22px 24px; box-shadow:0 20px 50px rgba(0,0,0,0.65); font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color:#f3f4f6;">
+        <div style="display:flex; align-items:flex-start; gap:16px;">
+            <div style="width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg, #6366f1, #a855f7); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:18px; color:#fff;">
+                🍪
+            </div>
+            <div style="flex:1;">
+                <div style="font-size:15px; font-weight:800; color:#fff; margin-bottom:4px; display:flex; align-items:center; gap:8px;">
+                    Privacy &amp; Cookie Notice
+                    <span style="font-size:10px; font-weight:700; background:rgba(99,102,241,0.2); color:#818cf8; border:1px solid rgba(99,102,241,0.3); padding:2px 8px; border-radius:999px; text-transform:uppercase; letter-spacing:0.5px;">DPDP Act 2023</span>
+                </div>
+                <p style="font-size:12px; line-height:1.6; color:#9ca3af; margin:0 0 14px 0;">
+                    We use strictly necessary session cookies to authenticate your account and ensure security. In accordance with India's <strong>DPDP Act 2023</strong> and <strong>GDPR</strong>, we never sell your personal data or track you across third-party websites.
+                </p>
+                <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px;">
+                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <button type="button" onclick="acceptAllCookies()" style="background:linear-gradient(135deg, #6366f1, #4f46e5); color:#fff; border:none; padding:8px 18px; border-radius:10px; font-size:12px; font-weight:700; cursor:pointer;">
+                            Accept All
+                        </button>
+                        <button type="button" onclick="acceptEssentialOnly()" style="background:rgba(255,255,255,0.08); color:#e5e7eb; border:1px solid rgba(255,255,255,0.15); padding:8px 16px; border-radius:10px; font-size:12px; font-weight:600; cursor:pointer;">
+                            Essential Only
+                        </button>
+                    </div>
+                    <div style="font-size:11px; color:#6b7280;">
+                        <a href="/privacy" style="color:#818cf8; text-decoration:none;">Privacy Notice</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        function getConsent() {
+            var m = document.cookie.match(new RegExp('(^| )fusion_cookie_consent=([^;]+)'));
+            return m ? m[2] : null;
+        }
+        function saveConsent(v) {
+            var maxAge = 180 * 24 * 60 * 60;
+            document.cookie = 'fusion_cookie_consent=' + encodeURIComponent(v) + '; Path=/; Max-Age=' + maxAge + '; SameSite=Lax';
+            var b = document.getElementById('fusion-cookie-banner');
+            if (b) b.style.display = 'none';
+        }
+        window.acceptAllCookies = function() { saveConsent('all'); };
+        window.acceptEssentialOnly = function() { saveConsent('essential'); };
+        window.showCookieBanner = function() {
+            var b = document.getElementById('fusion-cookie-banner');
+            if (b) b.style.display = 'block';
+        };
+        if (!getConsent()) {
+            setTimeout(function() {
+                var b = document.getElementById('fusion-cookie-banner');
+                if (b) b.style.display = 'block';
+            }, 800);
+        }
+    })();
+    </script>
+    `;
+}
+
 // Helper to safely get total server and user counts across Discord Collection / Map
 function getGuildStats(client) {
     let servers = 35;
@@ -47,7 +109,7 @@ const PANEL_URL = 'https://panel.fusionhub.in';
 const BRAND_NAME = 'Fusion Bot';
 const LEGAL_ENTITY = 'CHAUDHARY TANMAY';
 const SUPPORT_EMAIL = 'mail@fusionhub.in';
-const SUPPORT_SERVER = 'https://discord.gg/fusionbot';
+const SUPPORT_SERVER = 'https://discord.gg/tHAGVXg3vT';
 const LOGO_URL = 'https://i.ibb.co/vC79Nthr/Whats-App-Image-2026-03-23-at-6-49-47-PM.jpg';
 const BANNER_URL = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80';
 
@@ -601,7 +663,7 @@ function getJsonLdStructuredData() {
                 "sameAs": [
                     "https://github.com/fusionbot",
                     "https://twitter.com/fusionhub",
-                    "https://discord.gg/fusionbot",
+                    "https://discord.gg/tHAGVXg3vT",
                     "https://top.gg/bot/fusionbot"
                 ],
                 "contactPoint": [
@@ -922,13 +984,13 @@ function getSSRHomepageHTML(client) {
             </div>
 
             <!-- Giant Gradient Headline -->
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight apple-gradient-text max-w-5xl mx-auto leading-[1.08] mb-6">
-                The definitive Discord bot for server protection, automated cloud backups, and bilingual AI.
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight apple-gradient-text max-w-4xl mx-auto leading-tight mb-5">
+                Complete Discord bot for server security, cloud backups, and AI moderation.
             </h1>
 
             <!-- 2-Sentence Quote-Extractable Summary -->
-            <p class="text-base sm:text-xl text-neutral-400 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
-                Fusion Bot is an enterprise Discord management platform providing zero-latency Anti-Nuke raid shields, automated 24-hour dual-cloud backups to Google Drive, and native Hindi-English bilingual AI chat. Built for community resilience, it allows server owners to instantly restore nuked channels, roles, and permissions with a single click while safeguarding user privacy.
+            <p class="text-sm sm:text-base text-neutral-400 max-w-2xl mx-auto font-normal leading-relaxed mb-8">
+                Fusion Bot protects your Discord community with fast anti-nuke defense, automated Google Drive server backups, and smart AI moderation. Restore channels, roles, and settings easily with single-click recovery.
             </p>
 
             <!-- Apple Pill Action Buttons -->
