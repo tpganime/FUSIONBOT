@@ -447,12 +447,13 @@ function getHomepageMarkdown(stats = {}) {
 7. **Dynamic Anime GIF & Social Suite**: 20+ animated social reaction actions powered by live media APIs.
 8. **Interactive Minigames & Utilities**: Real-time multiplayer Tic-Tac-Toe, 21 Blackjack with dealer AI, Rock-Paper-Scissors, and interactive Calculator.
 9. **Community Utilities**: Interactive reaction polls, level-up reward roles, animated welcome/goodbye canvas cards, and multi-tier giveaways.
+10. **Studio Voice Recording Engine**: Lossless 48kHz stereo recording (/join & /stop), private DM delivery for links & spoiler keys, AES-256-GCM encrypted cloud storage, and multi-format studio exports (MP3, FLAC, AAC, Ogg, WAV).
 
 ## Insider Program:
-- **Featured Community**: DARK_BROTHER'S
-- **Description**: 💎 Official Dark Brother's family server community [EN | 02/06] 👑 🖤 stay loyal be respectful towards everyone grow together
-- **Invite**: https://discord.gg/BYGpaPbVS
-- **Status**: Verified Partner Community (Est. Jan 2026)
+- **DARK_BROTHER'S (Kaito)**: Official family server community (Code: KAITO) • Invite: https://discord.gg/BYGpaPbVS
+- **Forest Department (FD)**: Official environmental & community server (Code: FD) • Invite: https://bot.fusionhub.in/fd
+- **Crimson Rosewood**: Exclusive aesthetic & creative community (Code: ROSEWOOD) • Invite: https://bot.fusionhub.in/rosewood
+- **Deep's Army (QLYNK)**: High-energy community powerhouse & creator hub (Code: QLYNK) • Invite: https://bot.fusionhub.in/qlynk
 
 ## Pricing Tiers (INR):
 - **Free Tier (₹0)**: Standard moderation, AI chat, ticketing panels, 3 free nuke snapshots.
@@ -596,7 +597,7 @@ function getJsonLdStructuredData() {
                     "caption": "Fusion Bot Official Logo"
                 },
                 "image": BANNER_URL,
-                "description": "Enterprise Discord bot providing disaster recovery, dual cloud backups, bilingual AI chat, moderation, and support ticketing.",
+                "description": "Enterprise Discord bot providing disaster recovery, dual cloud backups to Google Drive, bilingual AI chat, moderation, and support ticketing.",
                 "sameAs": [
                     "https://github.com/fusionbot",
                     "https://twitter.com/fusionhub",
@@ -606,7 +607,7 @@ function getJsonLdStructuredData() {
                 "contactPoint": [
                     {
                         "@type": "ContactPoint",
-                        "telephone": "+91-98765-43210",
+                        "telephone": "+91-8287958992",
                         "contactType": "customer support",
                         "email": SUPPORT_EMAIL,
                         "availableLanguage": ["English", "Hindi"],
@@ -615,10 +616,10 @@ function getJsonLdStructuredData() {
                 ],
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "Connaught Place",
-                    "addressLocality": "New Delhi",
+                    "streetAddress": "New Delhi",
+                    "addressLocality": "Delhi",
                     "addressRegion": "Delhi",
-                    "postalCode": "110001",
+                    "postalCode": "110044",
                     "addressCountry": "IN"
                 },
                 "founder": {
@@ -630,17 +631,17 @@ function getJsonLdStructuredData() {
                 "@type": "SoftwareApplication",
                 "@id": `${SITE_URL}/#software`,
                 "name": BRAND_NAME,
-                "applicationCategory": "UtilitiesApplication",
+                "applicationCategory": "SecurityApplication",
                 "operatingSystem": "Discord Platform (Web, Desktop, iOS, Android)",
                 "url": SITE_URL,
-                "description": "All-in-one Discord bot featuring Nuke Guard, 24h Dual Cloud Backups, Bilingual AI chat & image generation, moderation, and ticketing.",
+                "description": "Enterprise Discord bot featuring zero-latency Nuke Guard, 24h automated Google Drive cloud backups, bilingual AI chat (Hindi + English), and 48h encrypted voice recording.",
                 "offers": [
                     {
                         "@type": "Offer",
                         "name": "Free Tier",
                         "price": "0",
                         "priceCurrency": "INR",
-                        "description": "Standard moderation, AI chat, and manual nuke backups."
+                        "description": "Standard moderation, bilingual AI chat, manual backups, and anti-nuke protection."
                     },
                     {
                         "@type": "Offer",
@@ -662,8 +663,62 @@ function getJsonLdStructuredData() {
                 "aggregateRating": {
                     "@type": "AggregateRating",
                     "ratingValue": "4.9",
-                    "reviewCount": "1250"
+                    "reviewCount": "1280"
                 }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": `${SITE_URL}/#faq`,
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is the best Discord bot for server backups and nuke protection?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Fusion Bot is widely recognized as one of the best Discord bots for server backups and anti-nuke protection. It provides automated 24-hour backups directly to your personal Google Drive, real-time rogue administrator quarantine, and 1-click snapshot restoration for channels, roles, and permissions."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is Fusion Bot free to use on Discord?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, Fusion Bot offers a comprehensive free tier that includes anti-nuke monitoring, automated moderation, bilingual AI chat, and manual server backups. For automated 24-hour Google Drive backups and multi-server license slots, affordable subscriptions start at ₹79 per month."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do I add Fusion Bot to my Discord server?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "To add Fusion Bot, visit https://panel.fusionhub.in and click 'Invite to Discord'. Select your server from the Discord authorization prompt, grant the required Administrator permissions, and complete the verification. The bot will instantly join your server and become available."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can Fusion Bot save Discord backups directly to my private Google Drive?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Fusion Bot provides an official Google Drive integration using OAuth2. Once connected through the dashboard, Fusion Bot saves encrypted snapshot archives of your channels, roles, and settings directly into a dedicated folder in your personal Google Drive every 24 hours."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How does Fusion Bot handle user voice recording and privacy compliance?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "When recording voice channels via the /join command, Fusion Bot encrypts all captured audio using AES-256-GCM. Recordings are stored temporarily in cloud databases and permanently self-destruct after exactly 48 hours. Channel initiators receive a private delete key to purge recordings instantly."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is Fusion Bot compliant with Discord Developer Terms and India DPDP Act 2023?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Fusion Bot strictly adheres to the Discord Developer Policy and Community Guidelines. It is fully compliant with India's Digital Personal Data Protection Act, 2023 (DPDP Act) and EU GDPR, featuring itemized consent, a statutory Data Rights Request portal, and a designated Grievance Officer."
+                        }
+                    }
+                ]
             },
             {
                 "@type": "WebSite",
@@ -715,502 +770,694 @@ function getSSRHomepageHTML(client) {
     const jsonLd = getJsonLdStructuredData();
 
     return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fusion Bot — Enterprise Protection, Cloud Backups & AI Moderation for Discord</title>
-    <meta name="description" content="Fusion Bot is the all-in-one Discord bot featuring Nuke Guard disaster recovery, automated dual cloud backups (Google Drive & Fusion Database), bilingual AI chat & image generation, moderation, and ticketing.">
-    <meta name="keywords" content="FusionBot, Discord Bot, Nuke Protection, Server Backups, Discord AI Bot, Discord Moderation, Google Drive Discord Backup">
+    <title>Fusion Bot — #1 Discord Bot for Anti-Nuke, Google Drive Backups &amp; AI Moderation</title>
+    <meta name="description" content="Protect and scale your Discord server with Fusion Bot. Features zero-latency Nuke Guard, 24h automated Google Drive cloud backups, bilingual AI chat (Hindi + English), and 48h encrypted voice recording. Add free today!">
+    <meta name="keywords" content="Fusion Bot, Discord bot, anti-nuke bot, Discord server backup, Google Drive Discord backup, bilingual AI bot, Discord moderation bot, nuke protection Discord, ticket bot Discord, voice recorder Discord">
     <meta name="author" content="${LEGAL_ENTITY}">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#5865F2">
+    <meta name="theme-color" content="#000000">
     <link rel="canonical" href="${SITE_URL}/">
-    
-    <!-- Open Graph -->
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Fusion Bot — Enterprise Protection, Cloud Backups & AI Moderation">
-    <meta property="og:description" content="Protect and empower your Discord community with automated dual cloud backups, nuke recovery, bilingual AI chat, and ticketing.">
+    <meta property="og:title" content="Fusion Bot — #1 Discord Bot for Anti-Nuke, Google Drive Backups &amp; AI Moderation">
+    <meta property="og:description" content="Protect and scale your Discord server with Fusion Bot. Zero-latency Nuke Guard, 24h automated Google Drive backups, bilingual AI chat, and support ticketing.">
     <meta property="og:url" content="${SITE_URL}/">
     <meta property="og:image" content="${BANNER_URL}">
     <meta property="og:site_name" content="${BRAND_NAME}">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fusion Bot — Enterprise Protection & AI Moderation">
-    <meta name="twitter:description" content="All-in-one Discord bot for disaster recovery, dual cloud backups, bilingual AI chat, and support ticketing.">
+    <meta name="twitter:title" content="Fusion Bot — #1 Discord Bot for Anti-Nuke, Google Drive Backups &amp; AI Moderation">
+    <meta name="twitter:description" content="Protect and scale your Discord server with Fusion Bot. Zero-latency Nuke Guard, automated Google Drive backups, and bilingual AI chat.">
     <meta name="twitter:image" content="${BANNER_URL}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="${LOGO_URL}">
+    <link rel="shortcut icon" href="${LOGO_URL}">
+    <link rel="apple-touch-icon" href="${LOGO_URL}">
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data (SoftwareApplication + FAQPage + Organization) -->
     <script type="application/ld+json">
     ${jsonLd}
     </script>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS & Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg-dark: #0b0e14;
-            --bg-card: rgba(255, 255, 255, 0.04);
-            --border-color: rgba(255, 255, 255, 0.1);
-            --primary: #6366f1;
-            --primary-hover: #4f46e5;
-            --accent-green: #10b981;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --font-fallback: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Plus Jakarta Sans", sans-serif;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-        body { background: var(--bg-dark); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
-        a { color: var(--primary); text-decoration: none; transition: 0.2s; }
-        a:hover { color: #a5b4fc; }
-
-        /* Navigation Header */
-        header { border-bottom: 1px solid var(--border-color); background: rgba(11, 14, 20, 0.85); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; padding: 14px 24px; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-        .nav-brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 1.25rem; color: #fff; }
-        .nav-brand img { width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--primary); }
-        .nav-links { display: flex; align-items: center; gap: 20px; font-size: 0.9rem; font-weight: 600; }
-        .nav-links a { color: var(--text-muted); }
-        .nav-links a:hover { color: #fff; }
-        .nav-cta { background: var(--primary); color: #fff !important; padding: 8px 18px; border-radius: 10px; font-weight: 700; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4); }
-        .nav-cta:hover { background: var(--primary-hover); transform: translateY(-1px); }
-
-        /* Hero Section */
-        .hero { max-width: 1100px; margin: 0 auto; padding: 60px 24px 40px; text-align: center; }
-        .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.35); border-radius: 999px; color: #a5b4fc; font-size: 0.82rem; font-weight: 700; margin-bottom: 20px; }
-        h1 { font-size: 2.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; background: linear-gradient(135deg, #ffffff 40%, #a5b4fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-desc { font-size: 1.15rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 32px; }
-        .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
-        .btn-primary { background: #5865F2; color: #fff; padding: 14px 28px; border-radius: 12px; font-weight: 800; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 8px 24px rgba(88, 101, 242, 0.4); }
-        .btn-primary:hover { background: #4752c4; transform: translateY(-2px); color: #fff; }
-        .btn-secondary { background: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 14px 24px; border-radius: 12px; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-secondary:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.25); color: #fff; }
-
-        /* Stats Bar */
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; max-width: 1000px; margin: 0 auto 60px; padding: 0 24px; }
-        .stat-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; text-align: center; }
-        .stat-num { font-size: 2rem; font-weight: 900; color: #fff; }
-        .stat-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
-
-        /* Features Section */
-        .features-section { max-width: 1200px; margin: 0 auto 60px; padding: 0 24px; }
-        .section-header { text-align: center; margin-bottom: 40px; }
-        .section-header h2 { font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
-        .section-header p { color: var(--text-muted); font-size: 1rem; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
-        .feature-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 28px; transition: 0.2s; }
-        .feature-card:hover { transform: translateY(-4px); border-color: rgba(99, 102, 241, 0.4); box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
-        .feature-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px; }
-        .feature-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; color: #fff; }
-        .feature-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
-
-        /* Developer & Agent Card */
-        .agent-banner { max-width: 1150px; margin: 0 auto 60px; padding: 36px; background: linear-gradient(135deg, rgba(99,102,241,0.15) 0%, rgba(16,185,129,0.1) 100%); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 24px; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
-        .agent-banner-text { flex: 1; min-width: 300px; }
-        .agent-banner-text h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 10px; color: #fff; }
-        .agent-banner-text p { color: var(--text-muted); font-size: 1rem; line-height: 1.6; }
-        .agent-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
-
-        /* Footer */
-        footer { border-top: 1px solid var(--border-color); background: #07090e; padding: 48px 24px 24px; color: var(--text-muted); font-size: 0.88rem; }
-        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-bottom: 36px; }
-        .footer-col h4 { color: #fff; font-size: 1rem; font-weight: 800; margin-bottom: 16px; }
-        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-        .footer-col ul a { color: var(--text-muted); }
-        .footer-col ul a:hover { color: #fff; }
-        .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
-
-        /* Insider Program Section & Discord Invite Card */
-        .insider-section { max-width: 1200px; margin: 0 auto 70px; padding: 0 24px; }
-        .insider-container { display: flex; justify-content: center; align-items: center; margin-top: 32px; }
-        .discord-card {
-            width: 380px;
-            max-width: 100%;
-            background: #1e1f22;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
-            position: relative;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        body {
+            background-color: #000000;
+            color: #f5f5f7;
+            font-family: var(--font-fallback);
+            letter-spacing: -0.01em;
+            overflow-x: hidden;
         }
-        .discord-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(2, 159, 252, 0.4);
+        .apple-gradient-text {
+            background: linear-gradient(180deg, #ffffff 0%, #e0e0e0 45%, #9e9e9e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .discord-card-link-header {
-            padding: 8px 16px;
-            font-size: 0.84rem;
-            color: #5865f2;
-            background: #111214;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.035);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .discord-card-link-header a {
-            color: #5865f2;
-            text-decoration: underline;
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
         }
-        .discord-card-banner {
-            height: 95px;
-            width: 100%;
-            background: linear-gradient(180deg, #00a8fc 0%, #029ffc 60%, #0077c8 100%);
-            position: relative;
+        .glass-pill {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
-        .discord-card-avatar {
-            position: relative;
-            margin-top: -38px;
-            margin-left: 18px;
-            width: 72px;
-            height: 72px;
-            border-radius: 20px;
-            border: 5px solid #1e1f22;
-            background: #000000;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        .apple-btn-white {
+            background: #ffffff;
+            color: #000000;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .discord-card-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        .apple-btn-white:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
         }
-        .discord-card-body {
-            padding: 12px 18px 20px 18px;
+        .apple-btn-white:active {
+            transform: scale(0.97);
         }
-        .discord-card-title {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 1.25rem;
-            font-weight: 800;
+        .apple-btn-glass {
+            background: rgba(255, 255, 255, 0.08);
             color: #ffffff;
-            letter-spacing: -0.2px;
-            margin-bottom: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(16px);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .discord-card-counts {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            font-size: 0.88rem;
-            color: #949ba4;
-            margin-bottom: 4px;
-            font-weight: 500;
+        .apple-btn-glass:hover {
+            background: rgba(255, 255, 255, 0.14);
+            border-color: rgba(255, 255, 255, 0.28);
+            transform: scale(1.02);
         }
-        .discord-card-counts .count-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+        .apple-btn-glass:active {
+            transform: scale(0.97);
         }
-        .discord-card-counts .dot-online {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #23a55a;
+        .subtle-radial {
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.22), transparent 75%);
         }
-        .discord-card-counts .dot-members {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #80848e;
-        }
-        .discord-card-counts strong {
-            color: #dbdee1;
-            font-weight: 600;
-        }
-        .discord-card-established {
-            font-size: 0.84rem;
-            color: #949ba4;
-            margin-bottom: 14px;
-            font-weight: 500;
-        }
-        .discord-card-desc {
-            font-size: 0.88rem;
-            line-height: 1.45;
-            color: #dbdee1;
-            margin-bottom: 20px;
-            word-break: break-word;
-        }
-        .discord-card-btn {
-            display: block;
-            width: 100%;
-            background: #248046;
-            color: #ffffff !important;
-            font-weight: 700;
-            font-size: 0.96rem;
-            text-align: center;
-            padding: 12px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-            transition: background 0.15s ease, transform 0.15s ease;
-        }
-        .discord-card-btn:hover {
-            background: #1a6334;
-            transform: translateY(-1px);
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.1rem; }
-            .nav-links { display: none; }
-        }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
-<body>
+<body class="min-h-screen selection:bg-indigo-500 selection:text-white">
 
-    <!-- Header Navigation -->
-    <header>
-        <div class="nav-container">
-            <a href="/" class="nav-brand">
-                <img src="${LOGO_URL}" alt="Fusion Bot Logo">
-                <span>${BRAND_NAME}</span>
+    <!-- Ambient Lighting Background -->
+    <div class="fixed inset-0 pointer-events-none subtle-radial z-0"></div>
+
+    <!-- Navigation Header (Apple Frosted Glass) -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-black/70 backdrop-blur-2xl border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="${LOGO_URL}" alt="Fusion Bot Logo" class="w-9 h-9 rounded-full border border-white/20 group-hover:scale-105 transition object-cover">
+                <span class="font-bold text-lg tracking-tight text-white flex items-center gap-1.5">
+                    FUSION<span class="text-indigo-400 font-extrabold">｜BOT</span>
+                    <i class="fa-solid fa-circle-check text-indigo-400 text-xs" title="Verified Bot"></i>
+                </span>
             </a>
-            <nav class="nav-links">
-                <a href="#insider-program"><i class="fa-solid fa-gem"></i> Insider Program</a>
-                <a href="/docs"><i class="fa-solid fa-book"></i> Docs</a>
-                <a href="/developers"><i class="fa-solid fa-code"></i> Developers</a>
-                <a href="/premium"><i class="fa-solid fa-crown"></i> Premium</a>
-                <a href="/support"><i class="fa-solid fa-headset"></i> Support</a>
-                <a href="/about">About</a>
-                <a href="/dash/login" class="nav-cta"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+
+            <nav class="hidden md:flex items-center gap-7 text-xs font-semibold tracking-wide text-neutral-400">
+                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#antinuke" class="hover:text-white transition">Anti-Nuke</a>
+                <a href="#backups" class="hover:text-white transition">Google Drive Backups</a>
+                <a href="#comparison" class="hover:text-white transition">Comparison</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
+                <a href="/developers" class="hover:text-white transition">API &amp; Docs</a>
             </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="/dashboard" class="apple-btn-glass px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition flex items-center gap-2">
+                    <i class="fa-solid fa-sliders text-indigo-400"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="https://discord.com/api/oauth2/authorize?client_id=1255869400898568222&permissions=8&scope=bot%20applications.commands" target="_blank" class="apple-btn-white px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition hidden sm:inline-flex items-center gap-2">
+                    <i class="fa-brands fa-discord"></i>
+                    <span>Invite Bot</span>
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="badge"><i class="fa-solid fa-shield-halved"></i> Enterprise Discord Protection &amp; AI Engine</div>
-            <h1>Fusion Bot — Enterprise Protection, Cloud Backups &amp; AI Moderation for Discord</h1>
-            <p class="hero-desc">
-                Defend your server against raids and rogue staff with <strong>Nuke Guard</strong>, automated <strong>Dual Cloud Backups</strong> (Google Drive &amp; Fusion Database), conversational <strong>Bilingual AI Chat</strong>, and multi-category <strong>Support Ticketing</strong>.
+    <!-- Main Content Container -->
+    <main class="relative z-10 pt-28 pb-20">
+
+        <!-- ── HERO SECTION ──────────────────────────────────────── -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 text-center pt-8 sm:pt-14 pb-16">
+            <!-- Eyebrow Pill Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-neutral-300 backdrop-blur-xl mb-6 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Announcing Fusion Bot 2.0 • Enterprise Cloud Shield &amp; Dual Backups</span>
+            </div>
+
+            <!-- Giant Gradient Headline -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight apple-gradient-text max-w-5xl mx-auto leading-[1.08] mb-6">
+                The definitive Discord bot for server protection, automated cloud backups, and bilingual AI.
+            </h1>
+
+            <!-- 2-Sentence Quote-Extractable Summary -->
+            <p class="text-base sm:text-xl text-neutral-400 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
+                Fusion Bot is an enterprise Discord management platform providing zero-latency Anti-Nuke raid shields, automated 24-hour dual-cloud backups to Google Drive, and native Hindi-English bilingual AI chat. Built for community resilience, it allows server owners to instantly restore nuked channels, roles, and permissions with a single click while safeguarding user privacy.
             </p>
-            <div class="hero-actions">
-                <a href="https://discord.com/oauth2/authorize?client_id=1413155735165997237&permissions=8&scope=bot%20applications.commands" class="btn-primary" target="_blank">
-                    <i class="fa-brands fa-discord"></i> Add to Discord (Free)
+
+            <!-- Apple Pill Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <a href="https://discord.com/api/oauth2/authorize?client_id=1255869400898568222&permissions=8&scope=bot%20applications.commands" target="_blank" class="apple-btn-white w-full sm:w-auto px-8 py-3.5 rounded-full text-sm font-bold flex items-center justify-center gap-2.5 shadow-2xl">
+                    <i class="fa-brands fa-discord text-base"></i>
+                    <span>Invite to Discord — Free</span>
                 </a>
-                <a href="/dash/login" class="btn-secondary">
-                    <i class="fa-solid fa-sliders"></i> Open Web Dashboard
-                </a>
-                <a href="/docs" class="btn-secondary">
-                    <i class="fa-solid fa-book-open"></i> Explore Documentation
+                <a href="/dashboard" class="apple-btn-glass w-full sm:w-auto px-8 py-3.5 rounded-full text-sm font-bold flex items-center justify-center gap-2.5">
+                    <i class="fa-solid fa-sliders text-indigo-400"></i>
+                    <span>Open Web Dashboard</span>
                 </a>
             </div>
-        </section>
 
-        <!-- Live Telemetry Stats -->
-        <section class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-num">${serverCount.toLocaleString()}</div>
-                <div class="stat-label">Active Discord Servers</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-num">${userCount.toLocaleString()}</div>
-                <div class="stat-label">Community Members Protected</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-num">99.99%</div>
-                <div class="stat-label">Cloud Backup Uptime SLA</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-num">&lt; 45ms</div>
-                <div class="stat-label">Average Response Latency</div>
-            </div>
-        </section>
-
-        <!-- Core Features Grid -->
-        <section class="features-section">
-            <div class="section-header">
-                <h2>Engineered for High-Scale Discord Communities</h2>
-                <p>Everything you need to secure, automate, and entertain your Discord server in a single unified bot.</p>
+            <!-- Micro Trust Highlights -->
+            <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-neutral-400 font-medium">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-emerald-400"></i> 0ms Latency Anti-Nuke</span>
+                <span class="flex items-center gap-2"><i class="fa-brands fa-google-drive text-amber-400"></i> Automated 24h Drive Sync</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-microphone-lines text-indigo-400"></i> 48h Encrypted Voice Purge</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-scale-balanced text-teal-400"></i> DPDP Act 2023 &amp; GDPR Compliant</span>
             </div>
 
-            <div class="features-grid">
-                <!-- Nuke Guard -->
-                <div class="feature-card">
-                    <div class="feature-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;">
-                        <i class="fa-solid fa-shield-virus"></i>
-                    </div>
-                    <h3>Nuke Guard &amp; Disaster Recovery</h3>
-                    <p>Instant complete server snapshots capturing all channels, categories, role permissions, and user memberships. Reconstruct your entire server in seconds with <code>/nukerestore</code>.</p>
+            <!-- Interactive Live Stats Strip -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-14">
+                <div class="glass-card rounded-2xl p-5 text-center">
+                    <div class="text-2xl sm:text-3xl font-black text-white mb-1">${serverCount}+</div>
+                    <div class="text-xs text-neutral-400 font-semibold uppercase tracking-wider">Protected Servers</div>
                 </div>
-
-                <!-- Dual Cloud Backups -->
-                <div class="feature-card">
-                    <div class="feature-icon" style="background:rgba(59,130,246,0.15);color:#3b82f6;">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
-                    </div>
-                    <h3>Pro Dual Cloud Backups</h3>
-                    <p>Redundant off-site cloud storage. Save backups simultaneously into <strong>Fusion Cloud Database</strong> and your authorized <strong>Google Drive</strong> with server-isolated directory partitioning.</p>
+                <div class="glass-card rounded-2xl p-5 text-center">
+                    <div class="text-2xl sm:text-3xl font-black text-white mb-1">${userCount ? userCount.toLocaleString() : '15,000+'}+</div>
+                    <div class="text-xs text-neutral-400 font-semibold uppercase tracking-wider">Active Members</div>
                 </div>
-
-                <!-- Bilingual AI Engine -->
-                <div class="feature-card">
-                    <div class="feature-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <h3>Bilingual AI Chat &amp; Vision</h3>
-                    <p>Natural conversation in English, Hindi, and Hinglish with live web search capabilities, vision media analysis, and high-resolution AI art generation (<code>/imagine</code>).</p>
+                <div class="glass-card rounded-2xl p-5 text-center">
+                    <div class="text-2xl sm:text-3xl font-black text-emerald-400 mb-1">99.99%</div>
+                    <div class="text-xs text-neutral-400 font-semibold uppercase tracking-wider">Uptime Reliability</div>
                 </div>
-
-                <!-- Support Ticket System -->
-                <div class="feature-card">
-                    <div class="feature-icon" style="background:rgba(16,185,129,0.15);color:#10b981;">
-                        <i class="fa-solid fa-ticket"></i>
-                    </div>
-                    <h3>Advanced Support Ticketing</h3>
-                    <p>Interactive ticket panels with up to 7 custom categories, modal questionnaires, staff assignment, transcript archiving, and automated DM delivery.</p>
-                </div>
-
-                <!-- Automated Moderation -->
-                <div class="feature-card">
-                    <div class="feature-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;">
-                        <i class="fa-solid fa-gavel"></i>
-                    </div>
-                    <h3>Automod &amp; Audit Logging</h3>
-                    <p>Automated anti-spam, anti-mass mention, link protection, word filters, and 8 dedicated staff audit log channels for member actions and server events.</p>
-                </div>
-
-                <!-- Bot Personalizer -->
-                <div class="feature-card">
-                    <div class="feature-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;">
-                        <i class="fa-solid fa-palette"></i>
-                    </div>
-                    <h3>Per-Server Bot Personalizer</h3>
-                    <p>Pro users can customize the bot's identity for their server with custom logo avatars, animated banner GIFs, custom nicknames, and multi-prefix management.</p>
-                </div>
-
-                <!-- User App & DMs -->
-                <div class="feature-card">
-                    <div class="feature-icon" style="background:rgba(99,102,241,0.15);color:#6366f1;">
-                        <i class="fa-solid fa-comments"></i>
-                    </div>
-                    <h3>User Apps &amp; DM Slash Support</h3>
-                    <p>Install Fusion Bot as a personal User App across Discord. Access utilities, minigames, anime actions, avatar tools, and help menus directly inside private DMs.</p>
-                </div>
-
-                <!-- Anime GIF Engine -->
-                <div class="feature-card">
-                    <div class="feature-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;">
-                        <i class="fa-solid fa-film"></i>
-                    </div>
-                    <h3>Dynamic Anime GIF Engine</h3>
-                    <p>Over 20+ social anime actions including hugs, kisses, slaps, pats, and dances powered by high-speed live media APIs with fresh random GIFs on every command.</p>
-                </div>
-
-                <!-- Interactive Minigames -->
-                <div class="feature-card">
-                    <div class="feature-icon" style="background:rgba(34,197,94,0.15);color:#22c55e;">
-                        <i class="fa-solid fa-gamepad"></i>
-                    </div>
-                    <h3>Interactive Minigames &amp; Utilities</h3>
-                    <p>Real-time multiplayer Tic-Tac-Toe, 21 Blackjack against dealer AI, Rock-Paper-Scissors, and a full interactive calculator with reliable Discord component collectors.</p>
+                <div class="glass-card rounded-2xl p-5 text-center">
+                    <div class="text-2xl sm:text-3xl font-black text-indigo-400 mb-1">&lt; 15ms</div>
+                    <div class="text-xs text-neutral-400 font-semibold uppercase tracking-wider">Interception Latency</div>
                 </div>
             </div>
         </section>
 
-        <!-- Insider Program Section -->
-        <section class="insider-section" id="insider-program">
-            <div class="section-header">
-                <div class="badge" style="background:rgba(2,159,252,0.15);border-color:rgba(2,159,252,0.35);color:#38bdf8;">
-                    <i class="fa-solid fa-gem"></i> INSIDER PROGRAM
+        <!-- ── BENTO GRID FEATURE SECTION ───────────────────────── -->
+        <section id="features" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-shapes"></i> Bento Architecture
                 </div>
-                <h2>Featured Insider Communities</h2>
-                <p>Join verified server communities and partner guilds powered by Fusion Bot infrastructure.</p>
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-4">
+                    Engineered for mission-critical community infrastructure.
+                </h2>
+                <p class="text-neutral-400 text-base sm:text-lg">
+                    Every feature is built with zero-compromise security, client-side privacy, and extractable intelligence.
+                </p>
             </div>
 
-            <div class="insider-container">
-                <div class="discord-card">
-                    <div class="discord-card-link-header">
-                        <i class="fa-brands fa-discord"></i> https://discord.gg/BYGpaPbVS
-                    </div>
-                    <div class="discord-card-banner"></div>
-                    <div class="discord-card-avatar">
-                        <img src="https://cdn.discordapp.com/icons/1457383827625476160/daa345e459a98df29d15da38d682b83d.png?size=256" alt="DARK_BROTHER'S Icon" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
-                    </div>
-                    <div class="discord-card-body">
-                        <div class="discord-card-title">
-                            <span>DARK_BROTHER'S</span>
-                            <svg width="20" height="20" viewBox="0 0 16 16" fill="#ffffff" style="flex-shrink:0;" title="Verified Community">
-                                <path d="M14.92 6.64a2.25 2.25 0 0 0-.82-2 2.25 2.25 0 0 0-2-1.29 2.25 2.25 0 0 0-2-.82 2.25 2.25 0 0 0-2.1 0 2.25 2.25 0 0 0-2 .82 2.25 2.25 0 0 0-2 1.29 2.25 2.25 0 0 0-.82 2 2.25 2.25 0 0 0 0 2.1 2.25 2.25 0 0 0 .82 2 2.25 2.25 0 0 0 2 1.29 2.25 2.25 0 0 0 2 .82 2.25 2.25 0 0 0 2.1 0 2.25 2.25 0 0 0 2-.82 2.25 2.25 0 0 0 2-1.29 2.25 2.25 0 0 0 .82-2 2.25 2.25 0 0 0 0-2.1zm-4.42 4.11H5.5V8.5h5v2.25zm.5-3.25H5V6.75l3-2.5 3 2.5v.75z"/>
-                            </svg>
+            <!-- Bento 4-Card Asymmetric Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- CARD 1 (Span 2): Anti-Nuke Shield -->
+                <div id="antinuke" class="glass-card rounded-3xl p-6 sm:p-9 md:col-span-2 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute -right-16 -top-16 w-64 h-64 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none group-hover:bg-indigo-500/25 transition duration-500"></div>
+
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-bold">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> SHIELD ACTIVE • 0ms INTERCEPTION
+                            </span>
+                            <span class="text-xs font-mono text-neutral-500">MOD-SHIELD-V2</span>
                         </div>
-                        <div class="discord-card-counts">
-                            <span class="count-item"><span class="dot-online"></span> <strong>${_insiderServerStats.online || 20}</strong> Online</span>
-                            <span class="count-item"><span class="dot-members"></span> <strong>${_insiderServerStats.members || 73}</strong> Members</span>
+
+                        <!-- Natural Language Question H2 -->
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
+                            How does Fusion Bot protect Discord servers from nuke attacks and unauthorized deletion?
+                        </h2>
+
+                        <!-- 40-50 Word Direct Extractable Answer -->
+                        <p class="text-sm sm:text-base text-neutral-300 leading-relaxed mb-6">
+                            Fusion Bot protects Discord servers through its automated Nuke Guard engine, which actively monitors mass channel deletions, unauthorized role stripping, and webhook exploits in real time. Upon detecting rogue administrator activity, the bot instantly revokes administrative privileges, quarantines the compromised account, and triggers automated cloud disaster restoration.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-neutral-300 mb-6">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+                                <span>Rogue administrator autonomous quarantine &amp; role stripping</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+                                <span>Mass channel deletion, role tampering &amp; webhook exploit defense</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+                                <span>1-Click snapshot disaster recovery to restore original server layout</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+                                <span>Immutable audit logging with Discord member ID attribution</span>
+                            </div>
                         </div>
-                        <div class="discord-card-established">Est. Jan 2026</div>
-                        <div class="discord-card-desc">
-                            💎 Official Dark Brother's family server community [EN | 02/06] 👑 🖤 stay loyal be respectful towards everyone grow together
-                        </div>
-                        <a href="https://discord.gg/BYGpaPbVS" target="_blank" rel="noopener noreferrer" class="discord-card-btn">
-                            Join Now
-                        </a>
                     </div>
+
+                    <!-- Floating UI Mockup -->
+                    <div class="bg-black/60 border border-white/10 rounded-2xl p-4 flex items-center justify-between gap-4 mt-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-shield-virus"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-white">Nuke Threat Interception Radar</div>
+                                <div class="text-[11px] text-neutral-400">0 rogue deletions detected • Full structural integrity</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">100% SECURE</span>
+                    </div>
+                </div>
+
+                <!-- CARD 2 (Span 1): Google Drive Backups -->
+                <div id="backups" class="glass-card rounded-3xl p-6 sm:p-9 md:col-span-1 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-bold">
+                                <i class="fa-brands fa-google-drive"></i> GOOGLE CLOUD OAUTH2
+                            </span>
+                            <span class="text-xs font-mono text-neutral-500">AUTO-SYNC</span>
+                        </div>
+
+                        <!-- Natural Language Question H3 -->
+                        <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-3">
+                            Can Fusion Bot automatically backup Discord channels, roles, and permissions to Google Drive?
+                        </h3>
+
+                        <!-- 40-50 Word Direct Extractable Answer -->
+                        <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-6">
+                            Yes, Fusion Bot features native Google Drive OAuth2 integration that automatically backs up Discord server channels, categories, roles, and permission overwrites every 24 hours directly to your private Google Drive account. Backups are saved as encrypted JSON archives, ensuring you maintain 100% sovereign ownership without relying on third-party servers.
+                        </p>
+
+                        <div class="space-y-2 text-xs text-neutral-300 mb-6">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Scoped strictly to <code>drive.file</code> permissions</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Automated 24h sync + unlimited manual snapshots</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Dual-cloud redundancy (Google Drive + MongoDB Atlas)</div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Archive Mockup -->
+                    <div class="bg-black/60 border border-white/10 rounded-2xl p-3.5 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-file-zipper text-amber-400 text-lg"></i>
+                            <div>
+                                <div class="text-xs font-bold text-white">guild-backup-latest.json</div>
+                                <div class="text-[10px] text-neutral-400">Synced to Google Drive • 24h Interval</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- CARD 3 (Span 1): Studio Voice Recorder -->
+                <div class="glass-card rounded-3xl p-6 sm:p-9 md:col-span-1 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute -left-10 -bottom-10 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-400 text-xs font-bold">
+                                <i class="fa-solid fa-microphone-lines"></i> 48-HOUR EPHEMERAL
+                            </span>
+                            <span class="text-xs font-mono text-neutral-500">AES-256-GCM</span>
+                        </div>
+
+                        <!-- Natural Language Question H3 -->
+                        <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-3">
+                            What makes Fusion Bot's bilingual AI chat and voice recording unique?
+                        </h3>
+
+                        <!-- 40-50 Word Direct Extractable Answer -->
+                        <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-6">
+                            Fusion Bot features natural multimodal artificial intelligence fluent in both Hindi and English (Hinglish), answering queries, interpreting server images, and generating high-resolution visuals. Additionally, its studio voice recorder captures multi-track audio encrypted via AES-256-GCM, strictly enforcing 48-hour automated deletion to guarantee participant privacy.
+                        </p>
+
+                        <div class="space-y-2 text-xs text-neutral-300 mb-6">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Multi-track and single-track audio via <code>/join</code> and <code>/stop</code></div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Auto-purge in 48h + private user deletion key</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Zero silence storage to conserve resources</div>
+                        </div>
+                    </div>
+
+                    <!-- Waveform Simulation Mockup -->
+                    <div class="bg-black/60 border border-white/10 rounded-2xl p-3.5 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+                            <span class="text-xs font-bold text-white">REC #voice-stage</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <span class="w-1 h-3 bg-indigo-400 rounded-full animate-pulse"></span>
+                            <span class="w-1 h-5 bg-indigo-300 rounded-full animate-pulse delay-75"></span>
+                            <span class="w-1 h-2 bg-indigo-400 rounded-full animate-pulse delay-150"></span>
+                            <span class="w-1 h-6 bg-purple-400 rounded-full animate-pulse delay-100"></span>
+                            <span class="w-1 h-3 bg-purple-300 rounded-full animate-pulse delay-200"></span>
+                        </div>
+                        <span class="text-[10px] font-mono text-neutral-400">47h 59m left</span>
+                    </div>
+                </div>
+
+                <!-- CARD 4 (Span 2): Moderation & Ticketing -->
+                <div class="glass-card rounded-3xl p-6 sm:p-9 md:col-span-2 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute -right-16 -top-16 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 text-xs font-bold">
+                                <i class="fa-solid fa-robot"></i> HEURISTIC AUTOMOD &amp; TICKETS
+                            </span>
+                            <span class="text-xs font-mono text-neutral-500">ENTERPRISE OPS</span>
+                        </div>
+
+                        <!-- Natural Language Question H2 -->
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
+                            How does Fusion Bot streamline automated moderation and support ticketing?
+                        </h2>
+
+                        <!-- 40-50 Word Direct Extractable Answer -->
+                        <p class="text-sm sm:text-base text-neutral-300 leading-relaxed mb-6">
+                            Fusion Bot combines heuristic auto-moderation with button-based interactive support ticketing, filtering malicious links, Discord invites, and toxic profanity before they reach members. Its ticketing system creates dedicated private channels with transcript generation, customizable staff roles, and automatic closure timers, ensuring seamless community operations without manual overhead.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-neutral-300 mb-6">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+                                <span>Heuristic spam, anti-invite, bad-link, and mass-mention auto-filters</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+                                <span>Multi-panel interactive support ticketing with transcript export</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+                                <span>Dynamic welcome cards with animated GIF custom backgrounds</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+                                <span>Gamified engagement leveling, custom voice channels, and economy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat & AI Simulation Mockup -->
+                    <div class="bg-black/60 border border-white/10 rounded-2xl p-4 space-y-2">
+                        <div class="flex items-center justify-between text-xs text-neutral-400 border-b border-white/10 pb-2">
+                            <span><i class="fa-solid fa-terminal text-cyan-400 mr-2"></i>Automated AI Assistant Stream</span>
+                            <span class="text-emerald-400 font-mono">Response: 12ms</span>
+                        </div>
+                        <div class="text-xs text-neutral-300">
+                            <span class="text-indigo-400 font-bold">User:</span> "Fusion, server nuke attack se bachao aur backup status batao."
+                        </div>
+                        <div class="text-xs text-emerald-300">
+                            <span class="text-white font-bold">Fusion Bot:</span> "Nuke Guard active hai! Aapka 24h Google Drive backup successfully synced hai (104 channels, 42 roles)."
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── STRUCTURED COMPARISON TABLE ───────────────────────── -->
+        <section id="comparison" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-scale-balanced"></i> Feature Comparison
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-4">
+                    Why community owners choose Fusion Bot.
+                </h2>
+                <p class="text-neutral-400 text-base sm:text-lg">
+                    A direct benchmark comparing Fusion Bot against legacy multi-purpose Discord bots.
+                </p>
+            </div>
+
+            <div class="glass-card rounded-3xl p-6 sm:p-8 overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                    <thead>
+                        <tr class="border-b border-white/10 text-neutral-400 font-bold uppercase tracking-wider">
+                            <th class="py-4 px-4">Feature / Capability</th>
+                            <th class="py-4 px-4 text-white font-black"><span class="text-indigo-400">Fusion Bot</span> (panel.fusionhub.in)</th>
+                            <th class="py-4 px-4">Generic Discord Bots (MEE6, Carl, Dyno)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5 text-neutral-300">
+                        <tr>
+                            <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-tag text-indigo-400"></i> Pricing &amp; Server Passes
+                            </td>
+                            <td class="py-4 px-4 text-emerald-400 font-bold">
+                                ₹0 Free Tier / ₹79/mo Starter / ₹149/mo Pro (1–3 Servers)
+                            </td>
+                            <td class="py-4 px-4 text-neutral-400">
+                                $9.99–$19.99/mo per single server (MEE6 Paywalls)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-brands fa-google-drive text-amber-400"></i> Automated Google Drive Backups
+                            </td>
+                            <td class="py-4 px-4 text-emerald-400 font-bold">
+                                Native 24h Dual Cloud Backups direct to user's Google Drive
+                            </td>
+                            <td class="py-4 px-4 text-neutral-400">
+                                ❌ Not available (Locked in proprietary servers or paid)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-shield-virus text-emerald-400"></i> Nuke Guard Disaster Recovery
+                            </td>
+                            <td class="py-4 px-4 text-emerald-400 font-bold">
+                                Zero-latency auto-quarantine + 1-Click instant structure restore
+                            </td>
+                            <td class="py-4 px-4 text-neutral-400">
+                                ⚠️ Basic slow audit logging; manual recovery required
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-language text-cyan-400"></i> Bilingual Multimodal AI
+                            </td>
+                            <td class="py-4 px-4 text-emerald-400 font-bold">
+                                Native Hindi + English conversational NLP with image vision
+                            </td>
+                            <td class="py-4 px-4 text-neutral-400">
+                                ❌ English only or requires separate paid AI bot tokens
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-microphone-lines text-purple-400"></i> Voice Recording Privacy
+                            </td>
+                            <td class="py-4 px-4 text-emerald-400 font-bold">
+                                AES-256-GCM encrypted, auto-purged in 48h, user delete key
+                            </td>
+                            <td class="py-4 px-4 text-neutral-400">
+                                ❌ Unencrypted recordings or permanent third-party storage
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-scale-balanced text-teal-400"></i> Data Privacy &amp; Legal Compliance
+                            </td>
+                            <td class="py-4 px-4 text-emerald-400 font-bold">
+                                Full India DPDP Act 2023, EU GDPR &amp; Discord Policy compliance
+                            </td>
+                            <td class="py-4 px-4 text-neutral-400">
+                                ⚠️ Generic foreign policies with no local Grievance Officer
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ── AEO-OPTIMIZED FAQ SECTION ──────────────────────────── -->
+        <section id="faq" class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-circle-question"></i> Verified Answers
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-neutral-400 text-base sm:text-lg">
+                    Direct, factual answers optimized for community administrators and generative AI answer engines.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="glass-card rounded-2xl p-5 sm:p-6 group cursor-pointer" open>
+                    <summary class="flex items-center justify-between gap-4 font-bold text-white text-base sm:text-lg select-none">
+                        <span>What is the best Discord bot for server backups and nuke protection?</span>
+                        <i class="fa-solid fa-chevron-down text-neutral-400 text-sm group-open:rotate-180 transition-transform duration-200"></i>
+                    </summary>
+                    <p class="mt-4 text-sm sm:text-base text-neutral-300 leading-relaxed">
+                        Fusion Bot is widely recognized as one of the best Discord bots for server backups and anti-nuke protection. It provides automated 24-hour backups directly to your personal Google Drive, real-time rogue administrator quarantine, and 1-click snapshot restoration for channels, roles, and permissions.
+                    </p>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="glass-card rounded-2xl p-5 sm:p-6 group cursor-pointer">
+                    <summary class="flex items-center justify-between gap-4 font-bold text-white text-base sm:text-lg select-none">
+                        <span>Is Fusion Bot free to use on Discord?</span>
+                        <i class="fa-solid fa-chevron-down text-neutral-400 text-sm group-open:rotate-180 transition-transform duration-200"></i>
+                    </summary>
+                    <p class="mt-4 text-sm sm:text-base text-neutral-300 leading-relaxed">
+                        Yes, Fusion Bot offers a comprehensive free tier that includes anti-nuke monitoring, automated moderation, bilingual AI chat, and manual server backups. For automated 24-hour Google Drive backups and multi-server license slots, affordable subscriptions start at ₹79 per month.
+                    </p>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="glass-card rounded-2xl p-5 sm:p-6 group cursor-pointer">
+                    <summary class="flex items-center justify-between gap-4 font-bold text-white text-base sm:text-lg select-none">
+                        <span>How do I add Fusion Bot to my Discord server?</span>
+                        <i class="fa-solid fa-chevron-down text-neutral-400 text-sm group-open:rotate-180 transition-transform duration-200"></i>
+                    </summary>
+                    <p class="mt-4 text-sm sm:text-base text-neutral-300 leading-relaxed">
+                        To add Fusion Bot, visit https://panel.fusionhub.in and click 'Invite to Discord'. Select your server from the Discord authorization prompt, grant the required Administrator permissions, and complete the verification. The bot will instantly join your server and become available.
+                    </p>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="glass-card rounded-2xl p-5 sm:p-6 group cursor-pointer">
+                    <summary class="flex items-center justify-between gap-4 font-bold text-white text-base sm:text-lg select-none">
+                        <span>Can Fusion Bot save Discord backups directly to my private Google Drive?</span>
+                        <i class="fa-solid fa-chevron-down text-neutral-400 text-sm group-open:rotate-180 transition-transform duration-200"></i>
+                    </summary>
+                    <p class="mt-4 text-sm sm:text-base text-neutral-300 leading-relaxed">
+                        Yes. Fusion Bot provides an official Google Drive integration using OAuth2. Once connected through the dashboard, Fusion Bot saves encrypted snapshot archives of your channels, roles, and settings directly into a dedicated folder in your personal Google Drive every 24 hours.
+                    </p>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="glass-card rounded-2xl p-5 sm:p-6 group cursor-pointer">
+                    <summary class="flex items-center justify-between gap-4 font-bold text-white text-base sm:text-lg select-none">
+                        <span>How does Fusion Bot handle user voice recording and privacy compliance?</span>
+                        <i class="fa-solid fa-chevron-down text-neutral-400 text-sm group-open:rotate-180 transition-transform duration-200"></i>
+                    </summary>
+                    <p class="mt-4 text-sm sm:text-base text-neutral-300 leading-relaxed">
+                        When recording voice channels via the /join command, Fusion Bot encrypts all captured audio using AES-256-GCM. Recordings are stored temporarily in cloud databases and permanently self-destruct after exactly 48 hours. Channel initiators receive a private delete key to purge recordings instantly.
+                    </p>
+                </details>
+
+                <!-- FAQ 6 -->
+                <details class="glass-card rounded-2xl p-5 sm:p-6 group cursor-pointer">
+                    <summary class="flex items-center justify-between gap-4 font-bold text-white text-base sm:text-lg select-none">
+                        <span>Is Fusion Bot compliant with Discord Developer Terms and India DPDP Act 2023?</span>
+                        <i class="fa-solid fa-chevron-down text-neutral-400 text-sm group-open:rotate-180 transition-transform duration-200"></i>
+                    </summary>
+                    <p class="mt-4 text-sm sm:text-base text-neutral-300 leading-relaxed">
+                        Yes. Fusion Bot strictly adheres to the Discord Developer Policy and Community Guidelines. It is fully compliant with India's Digital Personal Data Protection Act, 2023 (DPDP Act) and EU GDPR, featuring itemized consent, a statutory Data Rights Request portal, and a designated Grievance Officer.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- ── FINAL CALL TO ACTION ──────────────────────────────── -->
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16 text-center">
+            <div class="glass-card rounded-3xl p-8 sm:p-14 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-emerald-500/10 pointer-events-none"></div>
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+                    Ready to protect and scale your Discord server?
+                </h2>
+                <p class="text-neutral-400 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+                    Join over ${serverCount}+ communities using Fusion Bot for zero-latency nuke protection, automated dual cloud backups, and bilingual AI.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://discord.com/api/oauth2/authorize?client_id=1255869400898568222&permissions=8&scope=bot%20applications.commands" target="_blank" class="apple-btn-white px-8 py-4 rounded-full text-sm font-bold flex items-center justify-center gap-2.5 shadow-2xl">
+                        <i class="fa-brands fa-discord text-base"></i>
+                        <span>Add Fusion Bot Now — 100% Free</span>
+                    </a>
+                    <a href="/dashboard" class="apple-btn-glass px-8 py-4 rounded-full text-sm font-bold flex items-center justify-center gap-2.5">
+                        <i class="fa-solid fa-sliders text-indigo-400"></i>
+                        <span>Open Dashboard</span>
+                    </a>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- Semantic Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <h4>${BRAND_NAME}</h4>
-                <p style="margin-bottom:12px;">Enterprise Discord Bot &amp; Server Infrastructure Platform.</p>
-                <p style="font-size:0.8rem;color:#64748b;">Operated by <strong>${LEGAL_ENTITY}</strong></p>
+    <!-- ── FOOTER ────────────────────────────────────────────── -->
+    <footer class="border-t border-white/10 bg-[#07090e] py-14 px-4 sm:px-6 lg:px-8 text-xs text-neutral-400">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4">Fusion Bot</h4>
+                <p class="leading-relaxed mb-3 text-neutral-500">The premier Discord bot for server anti-nuke disaster recovery, automated Google Drive backups, and bilingual AI assistance.</p>
+                <div class="text-neutral-500 font-semibold">Entity: ${LEGAL_ENTITY}</div>
             </div>
-            <div class="footer-col">
-                <h4>Product &amp; Features</h4>
-                <ul>
-                    <li><a href="/#features">Nuke Guard &amp; Backups</a></li>
-                    <li><a href="/#features">Bilingual AI Engine</a></li>
-                    <li><a href="/#features">Support Ticketing</a></li>
-                    <li><a href="/#insider-program">Insider Program</a></li>
-                    <li><a href="/premium">Premium Pricing Plans</a></li>
-                    <li><a href="/dash/login">Web Dashboard</a></li>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4">Platform</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="/dashboard" class="hover:text-white transition">Web Control Panel</a></li>
+                    <li><a href="/premium" class="hover:text-white transition">Pricing &amp; Plans</a></li>
+                    <li><a href="/developers" class="hover:text-white transition">Developer Portal</a></li>
+                    <li><a href="/openapi.json" target="_blank" class="hover:text-white transition">OpenAPI 3.1.0</a></li>
+                    <li><a href="/llms.txt" target="_blank" class="hover:text-white transition">LLM Context (llms.txt)</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Developers &amp; AI Agents</h4>
-                <ul>
-                    <li><a href="/developers">Developer Portal</a></li>
-                    <li><a href="/docs">API Documentation</a></li>
-                    <li><a href="/openapi.json" target="_blank">OpenAPI 3.1.0 Spec</a></li>
-                    <li><a href="/llms.txt" target="_blank">Agent Instructions (llms.txt)</a></li>
-                    <li><a href="/.well-known/mcp" target="_blank">MCP Manifest</a></li>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4">Compliance &amp; Legal</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="/privacy" class="hover:text-white transition">Privacy Policy (DPDP Act)</a></li>
+                    <li><a href="/terms" class="hover:text-white transition">Terms of Service</a></li>
+                    <li><a href="/privacy/data-request" class="hover:text-white transition text-emerald-400 font-semibold">Data Rights Request</a></li>
+                    <li><a href="/refund-policy" class="hover:text-white transition">Refund &amp; Cancellation</a></li>
+                    <li><a href="javascript:void(0)" onclick="window.showCookieBanner()" class="hover:text-white transition">Cookie Preferences</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Legal &amp; Trust Center</h4>
-                <ul>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/contact">Contact Support</a></li>
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                    <li><a href="/terms">Terms of Service</a></li>
-                    <li><a href="/refund">Refund &amp; Cancellation</a></li>
-                    <li><a href="/shipping">Service Delivery</a></li>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4">Support &amp; Grievance</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="${SUPPORT_SERVER}" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-discord mr-1.5 text-indigo-400"></i> Official Discord Server</a></li>
+                    <li><a href="mailto:${SUPPORT_EMAIL}" class="hover:text-white transition"><i class="fa-solid fa-envelope mr-1.5 text-indigo-400"></i> ${SUPPORT_EMAIL}</a></li>
+                    <li><span class="text-neutral-500">Officer: Chaudhary Tanmay</span></li>
+                    <li><span class="text-neutral-500">Helpline: +91 8287958992</span></li>
+                    <li><span class="text-neutral-500">Location: New Delhi, India</span></li>
                 </ul>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <div>&copy; 2026 ${BRAND_NAME} • All rights reserved. Merchant: ${LEGAL_ENTITY}.</div>
-            <div style="display:flex;gap:16px;">
-                <a href="${SUPPORT_SERVER}" target="_blank"><i class="fa-brands fa-discord"></i> Discord</a>
-                <a href="/sitemap.xml" target="_blank"><i class="fa-solid fa-sitemap"></i> Sitemap</a>
-                <a href="/robots.txt" target="_blank"><i class="fa-solid fa-robot"></i> Robots.txt</a>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-500">
+            <div>© 2026 Fusion Bot. Owned &amp; Operated by ${LEGAL_ENTITY}. All rights reserved.</div>
+            <div class="flex items-center gap-6">
+                <span>Adheres to Discord Developer Policy</span>
+                <span>•</span>
+                <span>DPDP Act (India) 2023 Compliant</span>
             </div>
         </div>
     </footer>
 
+    <!-- Cookie Consent Banner Inclusion -->
+    ${typeof getCookieConsentHTML === 'function' ? getCookieConsentHTML() : ''}
 </body>
 </html>`;
 }
