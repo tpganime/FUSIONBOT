@@ -46,7 +46,7 @@ const SITE_URL = 'https://bot.fusionhub.in';
 const PANEL_URL = 'https://panel.fusionhub.in';
 const BRAND_NAME = 'Fusion Bot';
 const LEGAL_ENTITY = 'CHAUDHARY TANMAY';
-const SUPPORT_EMAIL = 'support@fusionhub.in';
+const SUPPORT_EMAIL = 'mail@fusionhub.in';
 const SUPPORT_SERVER = 'https://discord.gg/fusionbot';
 const LOGO_URL = 'https://i.ibb.co/vC79Nthr/Whats-App-Image-2026-03-23-at-6-49-47-PM.jpg';
 const BANNER_URL = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80';
@@ -607,21 +607,12 @@ function getJsonLdStructuredData() {
                 "contactPoint": [
                     {
                         "@type": "ContactPoint",
-                        "telephone": "+91-8287958992",
                         "contactType": "customer support",
                         "email": SUPPORT_EMAIL,
                         "availableLanguage": ["English", "Hindi"],
                         "areaServed": "Worldwide"
                     }
                 ],
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "New Delhi",
-                    "addressLocality": "Delhi",
-                    "addressRegion": "Delhi",
-                    "postalCode": "110044",
-                    "addressCountry": "IN"
-                },
                 "founder": {
                     "@type": "Person",
                     "name": LEGAL_ENTITY
@@ -1439,9 +1430,8 @@ function getSSRHomepageHTML(client) {
                 <ul class="space-y-2.5">
                     <li><a href="${SUPPORT_SERVER}" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-discord mr-1.5 text-indigo-400"></i> Official Discord Server</a></li>
                     <li><a href="mailto:${SUPPORT_EMAIL}" class="hover:text-white transition"><i class="fa-solid fa-envelope mr-1.5 text-indigo-400"></i> ${SUPPORT_EMAIL}</a></li>
-                    <li><span class="text-neutral-500">Officer: Chaudhary Tanmay</span></li>
-                    <li><span class="text-neutral-500">Helpline: +91 8287958992</span></li>
-                    <li><span class="text-neutral-500">Location: New Delhi, India</span></li>
+                    <li><span class="text-neutral-500">Grievance Redressal: Chaudhary Tanmay</span></li>
+                    <li><span class="text-neutral-500">Contact: mail@fusionhub.in</span></li>
                 </ul>
             </div>
         </div>
